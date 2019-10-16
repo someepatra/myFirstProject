@@ -1,0 +1,27 @@
+.option {
+  color: blue;
+  background-color: aqua;
+  text-align: center;
+}
+h1 {
+  font-size: 20px;
+  font-family: geofgia;
+  color: brown;
+  text-align: center;
+}
+.container {
+  text-align: center;
+}
+#show-data {
+  display: flex;
+}
+img {
+  max-width: 25%;
+  max-height: 25%;
+  padding-top: 20px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+  box-sizing: border-box;
+}
