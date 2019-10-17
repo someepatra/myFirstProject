@@ -8,14 +8,30 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <h1>News Update</h1>
-    <div class="container"></div>
-    <div id="show-data"></div>
-    <button class="option" id="current">Current</button>
-    <button class="option" id="sports">Sports</button>
-    <button class="option" id="politics">Politics</button>
-    <button class="option" id="movies">Movies</button>
-    <button class="option" id="weather">Weather</button>
+    <h1>Tea Time News</h1>
+    <div class="main-container">
+      <div class="left-container">
+        <!-- <h1>LEFT</h1> -->
+      </div>
+      <div class="container">
+        <a href="#" id="previous" class="direction-buttons">&#8249;</a>
+        <a href="#" id="next" class="direction-buttons">&#8250;</a>
+
+        <div class="carousel-button">
+          <button class="option" id="current">Current</button>
+          <button class="option" id="sports">Sports</button>
+          <button class="option" id="politics">Politics</button>
+          <button class="option" id="movies">Movies</button>
+          <button class="option" id="weather">Weather</button>
+        </div>
+        <div id="show-data"></div>
+        <div id="list-data" id="carousel"></div>
+      </div>
+
+      <div class="right-container">
+        <!-- <h1>RIGHT</h1> -->
+      </div>
+    </div>
 
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
