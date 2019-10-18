@@ -99,6 +99,8 @@ $(".news").on("click", event => {
 $(".option").on("click", event => {
   //clearInterval(slide);
   whenSelect = event.currentTarget.id;
+  $(".option").css("background-color", "red");
+  $(`#${whenSelect}`).css("background-color", "green");
   for (let i = 0; i < option.length; i++) {
     if (option[i] === event.currentTarget.id) {
       currentIndex = i;
