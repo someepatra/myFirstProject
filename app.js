@@ -1,7 +1,7 @@
 $(() => {
   //front screen showing all news
   const endpoint =
-    "https://newsapi.org/v2/everything?q=news&apiKey=63fa7350c3b0494b91b7f042d7e9b001";
+    "https://newsapi.org/v2/everything?q=news&apiKey=98fb96b5fe05420980f849c30e2c1424";
   console.log(endpoint);
 
   $.ajax({
@@ -11,7 +11,6 @@ $(() => {
     let $leftShowData = $(".left-container");
     let $rightShowData = $(".right-container");
 
-    console.log(data.articles.length);
     for (i = 0; i < 20; i++) {
       const $title = $("<h6>").text(data.articles[i].title);
       let $img = $("<img>").attr("src", data.articles[i].urlToImage);
@@ -32,16 +31,17 @@ $(() => {
 });
 const option = ["current", "sports", "politics", "movies", "weather"];
 // default values
-let whenSelect = "movies";
-let currentIndex = 3;
+let whenSelect = "current";
+let currentIndex = 0;
+
 // fetch data
+
 const fetchData = topic => {
-  const endpoint = `https://newsapi.org/v2/everything?q=${topic}&apiKey=63fa7350c3b0494b91b7f042d7e9b001`;
+  const endpoint = `https://newsapi.org/v2/everything?q=${topic}&apiKey=98fb96b5fe05420980f849c30e2c1424`;
 
   $.ajax({
     url: endpoint
   }).then(data => {
-    console.log(data);
     $("#list-data").empty();
     for (let i = 0; i < 7; i++) {
       const $title = $("<h6>").text(data.articles[i].title);
@@ -55,40 +55,64 @@ const fetchData = topic => {
   });
 };
 // when Buttons  clicked
-$(".option").on("click", event => {
-  whenSelect = event.currentTarget.id;
+const slideForeword = () => {
+  if (currentIndex < option.length - 1) {
+    currentIndex++;
+  } else {
+    currentIndex = 0;
+    whenSelect = option[0];
+  }
+  whenSelect = option[currentIndex];
+  $(".option").css("background-color", "red");
+  $(`#${whenSelect}`).css("background-color", "green");
+  console.log(whenSelect);
+  fetchData(whenSelect);
+};
 
+slideBackword = () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+  } else {
+    currentIndex = option.length - 1;
+    whenSelect = option[option.length - 1];
+  }
+  whenSelect = option[currentIndex];
+  $(".option").css("background-color", "red");
+  $(`#${whenSelect}`).css("background-color", "green");
+  console.log(whenSelect);
+  fetchData(whenSelect);
+};
+//const slide = setInterval(slideForeword, 3000);
+
+//audio play on click
+
+let audio = new Audio("bensound-clearday.mp3");
+$(".news").on("click", event => {
+  audio.play();
+  setInterval(() => {
+    audio.pause();
+  }, 10000);
+  console.log("logo clicked");
+  //audio.play();
+});
+
+$(".option").on("click", event => {
+  //clearInterval(slide);
+  whenSelect = event.currentTarget.id;
   for (let i = 0; i < option.length; i++) {
     if (option[i] === event.currentTarget.id) {
       currentIndex = i;
-      //console.log(currentIndex);
     }
   }
   fetchData(whenSelect);
 });
 // when direction buttons clicked
-//currentIndex = 0;
+
 $(".direction-buttons").on("click", event => {
   if (event.currentTarget.id === "next") {
-    if (currentIndex < option.length - 1) {
-      currentIndex++;
-    } else {
-      currentIndex = 0;
-      whenSelect = option[0];
-    }
-    whenSelect = option[currentIndex];
-    console.log(whenSelect);
+    slideForeword();
   } else {
-    if (currentIndex > 0) {
-      currentIndex--;
-    } else {
-      currentIndex = option.length - 1;
-      whenSelect = option[option.length - 1];
-    }
-    whenSelect = option[currentIndex];
-    console.log(whenSelect);
+    slideBackword();
   }
-
-  fetchData(whenSelect);
 });
 fetchData(whenSelect);

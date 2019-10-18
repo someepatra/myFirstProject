@@ -2,14 +2,23 @@
   color: white;
   background-color: red;
   text-align: center;
-  font-size: 25px;
+  font-size: 15px;
 }
 h1 {
   color: wheat;
   text-align: center;
   font-family: georgia;
-  background-color: black;
+  width: 70%;
   padding: 10px;
+}
+.heading {
+  display: flex;
+  background-color: blueviolet;
+  /* height: 70px; */
+}
+.heading img {
+  max-width: 5%;
+  max-height: 5%;
 }
 h6 {
   font-size: 10px;
@@ -20,6 +29,12 @@ h6 {
 .container {
   text-align: center;
   flex: 6;
+  outline: 2px dotted rgb(150, 150, 236);
+}
+
+.container img {
+  max-width: 20%;
+  max-height: 20%;
 }
 img {
   max-width: 90%;
@@ -44,8 +59,18 @@ img {
   flex: 3;
   text-align: center;
 }
-.direction-buttons {
-  background-color: #4caf50;
+#next {
+  position: absolute;
+  top: 90%;
+  left: 72%;
+  background-color: blue;
+  color: white;
+}
+#previous {
+  position: absolute;
+  top: 90%;
+  right: 72%;
+  background-color: blue;
   color: white;
 }
 #list-data {
