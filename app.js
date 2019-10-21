@@ -54,6 +54,12 @@ const fetchData = topic => {
     }
   });
 };
+
+$("#search").on("submit", () => {
+  const $str = $("#search").textVal();
+  fetchData($str);
+  console.log("good");
+});
 // when Buttons  clicked
 const slideForeword = () => {
   if (currentIndex < option.length - 1) {
