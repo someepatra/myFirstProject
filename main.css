@@ -20,6 +20,14 @@ h1 {
   top: 20px;
   right: -5px;
 }
+
+#searchButton {
+  height: 20px;
+  position: relative;
+  top: 23px;
+  right: -10px;
+}
+
 .heading {
   position: relative;
   /* float: left; */
@@ -48,7 +56,6 @@ h6 {
   flex: 6;
   outline: 2px dotted rgb(150, 150, 236);
 }
-
 .container img {
   max-width: 20%;
   max-height: 20%;
@@ -113,26 +120,30 @@ img {
   margin: 0 10px;
   box-sizing: border-box;
 }
+.link {
+  font-size: 15px;
+}
+
+footer {
+  text-align: center;
+}
 /* when you drag the screen */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1028px) {
   body {
     background-color: burlywood;
     font-size: 10px;
   }
   .option {
-    color: white;
-    background-color: red;
-    text-align: center;
-    font-size: 10px;
+    font-size: 15px;
+  }
+  h6 {
+    font-size: 20px;
+    font-family: tahoma;
+    color: green;
   }
 }
-
-body {
-  font-size: 10px;
-}
-
 /* width of iphone6/7/8plus(414x736) */
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 660px) {
   .left-container {
     display: none;
   }
@@ -146,26 +157,35 @@ body {
   #list-data {
     font-size: 20px;
   }
-
   h1 {
     color: wheat;
     font-size: 25px;
-    text-align: center;
-    font-family: georgia;
     width: 70%;
-    position: relative;
-    top: 5px;
   }
   #search {
     height: 20px;
-    position: relative;
     top: 20px;
     right: -8px;
   }
   .heading img {
     max-width: 8%;
-    /* position: relative; */
     top: 0px;
     left: -3px;
+  }
+  .option {
+    text-align: center;
+    font-size: 1.2em;
+    width: 15%;
+  }
+  #next {
+    left: 92%;
+  }
+  #previous {
+    right: 92%;
+  }
+  h6 {
+    font-size: 15px;
+    font-family: geofgia;
+    color: brown;
   }
 }

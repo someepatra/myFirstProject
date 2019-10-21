@@ -15,6 +15,7 @@ $(() => {
       const $title = $("<h6>").text(data.articles[i].title);
       let $img = $("<img>").attr("src", data.articles[i].urlToImage);
       let $url = $("<a>").attr("href", data.articles[i].url);
+      $url.attr("class", "link");
       $url.text("read more....");
 
       if (i < 10) {
@@ -47,6 +48,7 @@ const fetchData = topic => {
       const $title = $("<h6>").text(data.articles[i].title);
       const $img = $("<img>").attr("src", data.articles[i].urlToImage);
       let $url = $("<a>").attr("href", data.articles[i].url);
+      $url.attr("class", "link");
       $url.text("read more....");
       $("#list-data").append($img);
       $("#list-data").append($title);
@@ -54,11 +56,12 @@ const fetchData = topic => {
     }
   });
 };
-
-$("#search").on("submit", () => {
-  const $str = $("#search").textVal();
+//"https://newsapi.org/v2/everything?q=National&apiKey=98fb96b5fe05420980f849c30e2c1424"
+$("#searchButton").on("click", () => {
+  const $str = $("#search").val();
+  //console.log($str);
+  $("#search").val("");
   fetchData($str);
-  console.log("good");
 });
 // when Buttons  clicked
 const slideForeword = () => {
