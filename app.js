@@ -17,6 +17,7 @@ $(() => {
       let $url = $("<a>").attr("href", data.articles[i].url);
       $url.attr("class", "link");
       $url.text("read more....");
+      $img.attr("title", data.articles[i].description);
 
       if (i < 10) {
         $leftShowData.append($img);
@@ -35,7 +36,7 @@ const option = ["current", "sports", "politics", "movies", "weather"];
 let whenSelect = "current";
 let currentIndex = 0;
 
-// fetch data
+// fetch data according
 
 const fetchData = topic => {
   const endpoint = `https://newsapi.org/v2/everything?q=${topic}&apiKey=98fb96b5fe05420980f849c30e2c1424`;
@@ -44,7 +45,7 @@ const fetchData = topic => {
     url: endpoint
   }).then(data => {
     $("#list-data").empty();
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < data.articles.length; i++) {
       const $title = $("<h6>").text(data.articles[i].title);
       const $img = $("<img>").attr("src", data.articles[i].urlToImage);
       let $url = $("<a>").attr("href", data.articles[i].url);
@@ -53,16 +54,22 @@ const fetchData = topic => {
       $("#list-data").append($img);
       $("#list-data").append($title);
       $("#list-data").append($url);
+      $img.attr("title", data.articles[i].description);
     }
   });
 };
 //"https://newsapi.org/v2/everything?q=National&apiKey=98fb96b5fe05420980f849c30e2c1424"
 $("#searchButton").on("click", () => {
   const $str = $("#search").val();
-  //console.log($str);
   $("#search").val("");
   fetchData($str);
 });
+// //when hover
+// $(".img").hover(() => {
+//   const $desc = $("<h5>")
+//     .text(data.articles[i].description)
+//     .attr("class", "desc");
+// });
 // when Buttons  clicked
 const slideForeword = () => {
   if (currentIndex < option.length - 1) {
@@ -74,7 +81,7 @@ const slideForeword = () => {
   whenSelect = option[currentIndex];
   $(".option").css("background-color", "red");
   $(`#${whenSelect}`).css("background-color", "green");
-  console.log(whenSelect);
+  //console.log(whenSelect);
   fetchData(whenSelect);
 };
 
@@ -88,7 +95,7 @@ slideBackword = () => {
   whenSelect = option[currentIndex];
   $(".option").css("background-color", "red");
   $(`#${whenSelect}`).css("background-color", "green");
-  console.log(whenSelect);
+  //console.log(whenSelect);
   fetchData(whenSelect);
 };
 //const slide = setInterval(slideForeword, 3000);
@@ -101,10 +108,7 @@ $(".news").on("click", event => {
   setInterval(() => {
     audio.pause();
   }, 10000);
-  console.log("logo clicked");
-  //audio.play();
 });
-
 $(".option").on("click", event => {
   //clearInterval(slide);
   whenSelect = event.currentTarget.id;
