@@ -30,7 +30,6 @@ h1 {
 }
 .heading {
   position: relative;
-  /* float: left; */
   min-height: 10px;
   margin: 2px;
   padding: 10px;
@@ -40,17 +39,12 @@ h1 {
   height: 50px;
   border-radius: 10px;
 }
-/* .heading img {
-  max-width: 8%;
-  position: relative;
-  top: 0px;
-  left: 20px;
-} */
 h6 {
   font-size: 10px;
   font-family: geofgia;
   color: brown;
   text-align: center;
+  margin-top: 15px;
 }
 .container {
   text-align: center;
@@ -65,11 +59,10 @@ img {
   max-width: 90%;
   max-height: 90%;
   padding-top: 10px;
-  float: left;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 10px;
+  margin: -5px 5px;
   box-sizing: border-box;
   border-radius: 30px;
 }
@@ -108,10 +101,10 @@ img {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 1700px;
-  overflow: scroll;
+  height: 1600px;
+  overflow-y: scroll;
+  padding-top: 20px;
 }
 #list-data img {
   max-width: 70%;
@@ -125,7 +118,8 @@ img {
   box-sizing: border-box;
 }
 .link {
-  font-size: 15px;
+  font-size: 10px;
+  margin-bottom: 5px;
 }
 .details {
   text-align: center;
@@ -136,20 +130,33 @@ img {
 @media only screen and (min-width: 1028px) {
   body {
     background-color: rgb(118, 209, 118);
-    font-size: 10px;
+    /* font-size: 10px; */
   }
   .option {
     font-size: 15px;
   }
+  #list-data {
+    height: 2150px;
+  }
   h6 {
-    font-size: 20px;
+    font-size: 10px;
     font-family: tahoma;
     color: green;
   }
   h1 {
     color: wheat;
-    font-size: 30px;
+    font-size: 20px;
     top: -5px;
+  }
+  .left-container {
+    height: 700px;
+  }
+  .right-container {
+    height: 700px;
+  }
+  img {
+    max-width: 85%;
+    max-height: 85%;
   }
 }
 /* width of iphone6/7/8plus(414x736) */
@@ -170,7 +177,7 @@ img {
   h1 {
     color: wheat;
     font-size: 25px;
-    top: -5px;
+    top: -15px;
   }
   #search {
     height: 20px;
@@ -197,5 +204,8 @@ img {
     font-size: 15px;
     font-family: geofgia;
     color: brown;
+  }
+  .heading {
+    height: 80px;
   }
 }
