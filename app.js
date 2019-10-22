@@ -36,7 +36,7 @@ const option = ["current", "sports", "politics", "movies", "weather"];
 let whenSelect = "current";
 let currentIndex = 0;
 
-// fetch data according
+// fetch data according to
 
 const fetchData = topic => {
   const endpoint = `https://newsapi.org/v2/everything?q=${topic}&apiKey=98fb96b5fe05420980f849c30e2c1424`;
