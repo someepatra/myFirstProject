@@ -70,6 +70,7 @@ img {
   justify-content: center;
   margin: 0 10px;
   box-sizing: border-box;
+  border-radius: 30px;
 }
 .main-container {
   display: flex;
@@ -124,13 +125,15 @@ img {
   font-size: 15px;
 }
 
-footer {
+.details {
   text-align: center;
+  background-color: plum;
+  border: 2px;
 }
 /* when you drag the screen */
 @media only screen and (min-width: 1028px) {
   body {
-    background-color: burlywood;
+    background-color: rgb(118, 209, 118);
     font-size: 10px;
   }
   .option {
