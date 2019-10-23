@@ -27,6 +27,7 @@ The user can accomplish different news update in following ways
 ### Search:
 
 The user can search any news by entering respective keywords in the search bar.
+![alt text](images/search.png "Search")
 
 ### Option Buttons:
 
