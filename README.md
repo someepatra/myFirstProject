@@ -77,6 +77,16 @@ https://vigilant-engelbart-0e99cd.netlify.com/
 
 Mausumi Patra
 
+## Future Goal
+
+### I have used a rolling carousel which was showhing news with continious sliding way,
+
+### but I got an error due to calling the API again and agin. So to avoid such situation
+
+### i removed set interval option from my code but i wanted to add that feature by using some
+
+### other functionality.
+
 # Supported By
 
 - Leo
