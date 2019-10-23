@@ -6,15 +6,15 @@ Tea Time News provides all kinds of NEWS update based upon different search crit
 
 ## Technologies
 
-### HTML
+- HTML
 
-### CSS
+* CSS
 
-### Java script
+* Java script
 
-### jQuery
+* jQuery
 
-### Ajax
+* Ajax
 
 ## Application Programming Interface (API)
 
@@ -24,48 +24,48 @@ The Tea Time News webpage used the newsapi.org
 
 The user can accomplish different news update in following ways
 
-### Search:
+1. Search:
 
 The user can search any news by entering respective keywords in the search bar.
 ![alt text](images/search.png "Search")
 
-### Option Buttons:
+2. Option Buttons:
 
 Users can navigate to the different news page by clicking on the following buttons
 ![alt text](images/optionbutton.png "Optionbutton")
 
-### Carousel Button:
+3. Carousel Button:
 
 User can move to different news by clicking on previous and next carousel buttons
 ![alt text](images/carousel.png "Carousel")
 
-### Read More Link:
+4. Read More Link:
 
 User can know the news details by clicking on the “read more” link
 ![alt text](images/readmore.png "Readmore")
 
-### Audio Play:
+5. Audio Play:
 
 Audio will play by clicking on the News logo
 ![alt text](images/audio.png "Audio")
 
-### Hover:
+6. Hover:
 
 Displays the description of the respective news while mouse hovering
 ![alt text](images/hover.png "Hover")
 
-### Responsiveness:
+7. Responsiveness:
 
 The news websites is responsive and can be viewed in any devices.
 
-Desktop View:
-![alt text](images/desktop.png "Desktop")
+- Desktop View:
+  ![alt text](images/desktop.png "Desktop")
 
-Mobile View :
-![alt text](images/phone.png "Phone")
+- Mobile View :
+  ![alt text](images/phone.png "Phone")
 
-IPAD View:
-![alt text](images/ipad.png "Ipad")
+- IPAD View:
+  ![alt text](images/ipad.png "Ipad")
 
 # My Web Page
 
@@ -77,8 +77,8 @@ Mausumi Patra
 
 # Supported By
 
-### Leo
+- Leo
 
-### Brian Carroll
+- Brian Carroll
 
-### Joem Casusi
+- Joem Casusi
