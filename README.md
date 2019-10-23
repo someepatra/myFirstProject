@@ -77,7 +77,7 @@ https://vigilant-engelbart-0e99cd.netlify.com/
 
 ### Mausumi Patra
 
-## Future Goal
+# Future Goal
 
 ### I have used a rolling carousel which was showhing news with continious sliding way,
 
